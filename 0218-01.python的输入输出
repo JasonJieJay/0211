@@ -1,0 +1,35 @@
+1.python的输入和输出
+	a.输入和输出的应用场景
+		输入(键盘、鼠标、mic、摄像头)：
+			注册用户时候
+			淘宝搜索商品
+			直播的时候
+		输出(屏幕提示)
+			注册用户时候
+			调试信息时候
+			登录用户的时候
+	b.输入
+		input()		python2中函数接受键盘输入的数字信息，python3中函数接受的是键盘的字符串信息
+		raw_input()	python2中函数接受键盘输入的字符信息，python3中已经废弃
+	c.输出
+		print()		括号中可以是字符串、数字、变量等等
+		c1.直接输出
+			把括号中内容直接显示在界面
+			print(100)
+			print('您输入的密码有误')
+		c2.变量输出
+			变量：存储数据的
+			变量名=值
+			name=input('请输入ztl的学历：')
+			print(name)
+		c3.格式化输出
+			print('%s 是 o my dear mom ！'% 'chui')
+
+			print('%s 是 %d'%('python',1))
+
+		c4.函数输出
+			print(abs(-20))
+			print(type(name))
+
+
+	
