@@ -1,0 +1,127 @@
+
+a.栈的方式访问列表
+	1.队列     先进先出
+	2.栈	   后进先出
+>>> l=[1,2,3,4]
+>>> print(l)
+[1, 2, 3, 4]
+>>> l.append(5)
+>>> print(l)
+[1, 2, 3, 4, 5]
+>>> l.append('a')
+>>> print(l)
+[1, 2, 3, 4, 5, 'a']
+>>> l.pop()
+'a'
+>>> print(l)
+[1, 2, 3, 4, 5]
+>>> l.pop()
+5
+>>> print(l)
+[1, 2, 3, 4]
+>>> 
+
+b.获取列表的索引
+	注意：只能是同种类型数据进行操作，字符串和字符串，数字和数字
+	注意：列表.index() 元素第一次出现的位置
+>>> l=['2dog','3pig','4tiger','5cat']
+>>> print(l)
+['2dog', '3pig', '4tiger', '5cat']
+>>> print(l.index('5cat'))
+3
+>>> l=[1,3,4,2,2,2]
+>>> print(l.index(2))
+3
+>>> for index,value in enumerate(l):
+...     print('索引是'+index+'值是'+value)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: Can't convert 'int' object to str implicitly
+>>> for index,value in enumerate(l):
+...     print('索引是'+str(index)+'值是'+str(value))
+... 
+c.列表的排序
+>>> l2=[1,3,2,4]
+>>> l2.reverse()
+>>> print(l2)
+[4, 2, 3, 1]
+>>> l=[1,3,5,2,4,6]
+>>> l.sort()
+>>> print(l)
+[1, 2, 3, 4, 5, 6]
+>>> l=[1,3,5,2,4,6]
+>>> help(list)
+
+>>> print(l)
+[1, 3, 5, 2, 4, 6]
+>>> l.sort(reverse=True)
+>>> print(l)
+[6, 5, 4, 3, 2, 1]
+>>> 
+>>> l2=[1,3,2,4]
+>>> l2.reverse()
+>>> print(l2)
+[4, 2, 3, 1]
+>>> l=[1,3,5,2,4,6]
+>>> l.sort()
+>>> print(l)
+[1, 2, 3, 4, 5, 6]
+>>> l=[1,3,5,2,4,6]
+>>> help(list)
+
+>>> print(l)
+[1, 3, 5, 2, 4, 6]
+>>> l.sort(reverse=True)
+>>> print(l)
+[6, 5, 4, 3, 2, 1]
+>>> 
+
+d.列表推导式
+列表推导式又叫列表解析式，提供一种简单方法创建列表
+结构中括号包含一个表达式，一个与据可以有0个或者多个if语句，表达式是任意类型对象，返回结果是一个新的列表
+
+优势：
+	1.代码短，可读性好
+	2.速度快
+
+列表推导式
+	标准格式
+	[表达式 for 变量 in 列表]
+	[表达式 for 变量 in 列表 if 条件]
+a=[1,2,3,4]
+print([5*x for x in a])
+'''
+b=[]
+for i in a:
+        b.append(i*5)
+        #print(i*5)
+print(b)
+'''
+#没有给定列表可以使用range方法
+print([3*x for x in range(1,11)])
+
+#加入if条件进行推导
+print([x for x in a if x%2==0])
+
+#多个for语句进行列表推导
+print([[x,y] for x in range(2) for y in range(2)])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
