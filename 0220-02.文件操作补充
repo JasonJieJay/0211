@@ -1,0 +1,36 @@
+学习目标
+掌握简单的文件操作
+
+课程内容
+a.read  readline readlines区别
+b.文件操作实例
+
+
+a.read readline readlines区别
+read		读取整个文件
+readline	读取下一行
+readlines	读取整个文件到一个迭代器供遍历
+
+b.文件操作实例
+当前目录下创建文件txl.txt 内容
+heygor   110
+o8ma     119
+
+判断电话110是否存在于文件中
+file=open('/home/heygor/0220/txl.txt','r')
+for i in file.readlines():
+        #print(i)
+        i=i.strip('\n')
+        a=i.split(' ')
+        #print(a)
+        #print(type(i))
+        if a[-1]=='110':
+                print('tel is here!')
+file.close()
+
+
+
+
+
+
+
