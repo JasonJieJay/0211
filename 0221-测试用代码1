@@ -1,0 +1,78 @@
+#coding=utf-8
+#功能模块
+#1.新增  2.删除  3.修改
+
+#1.把文件中数据存储到变量中
+#2.判断各个功能
+#a.每个功能设置为一个函数
+
+#1.删除功能
+	name=str(input('请输入要删除的名字:'))
+        with open('/home/zelin/0211/01.csv','w') as d:
+                file=csv.writer(d,dialect='excel')
+                for a in reader:
+                        if name not in a:
+                                d.write(a)
+                print('删除成功')
+
+def delete1():
+	name=str(input('请输入要删除的名字:'))
+        with open('/home/zelin/0211/01.csv','w') as d:
+                file=csv.writer(d,dialect='excel')
+                for a in reader:
+                        if name not in a:
+                                d.write(a)
+                print('删除成功')
+
+
+#2.修改功能
+	name2=str(input('请输入要修改号码的名字:'))
+        with open('/home/zelin/0211/01.csv','w') as w:
+                file=csv.writer(w,dialect='excel')
+                for l in reader:
+                        l=l.strip('\n')
+                        l=l.split(',')
+                        if l[0]==name2:
+                                num=str(input('请输入新的号码:'))
+                                l[1]=num
+                                file.writerow(l)
+                        else:
+
+                                file.writerow(l)
+def update1():
+	name2=str(input('请输入要修改号码的名字:'))
+        with open('/home/zelin/0211/01.csv','w') as w:
+                file=csv.writer(w,dialect='excel')
+                for l in reader:
+                        l=l.strip('\n')
+                        l=l.split(',')
+                        if l[0]==name2:
+                                num=str(input('请输入新的号码:'))
+                                l[1]=num
+                                file.writerow(l)
+                        else:
+
+                                file.writerow(l)
+
+#3.新增
+	name3=input('请输入新增的用户名:')
+        num3=input('请输入新增的号码: ')
+        with open('/home/zelin/0211/01.csv','w') as x:
+                file=csv.writer(x,dialect='excel')
+                for p in reader:
+                        p=p.strip('\n')
+                        p=p.split(',')
+                        file.writerow(p)
+                pd=[name3,num3]
+
+def insert1():
+	name3=input('请输入新增的用户名:')
+        num3=input('请输入新增的号码: ')
+        with open('/home/zelin/0211/01.csv','w') as x:
+                file=csv.writer(x,dialect='excel')
+                for p in reader:
+                        p=p.strip('\n')
+                        p=p.split(',')
+                        file.writerow(p)
+                pd=[name3,num3]
+
