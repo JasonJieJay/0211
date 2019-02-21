@@ -1,1 +1,45 @@
 
+#coding=utf-8
+import csv
+with open('/home/zelin/0211/01.csv','r') as f:
+	reader=f.readlines()
+	for i in reader:
+		print(i)
+choice=input('新增请按x,删除请按d,修改请按q\n')
+if choice=='d':	
+	name=str(input('请输入要删除的名字:'))
+	with open('/home/zelin/0211/01.csv','w') as d:
+		file=csv.writer(d,dialect='excel')
+		for a in reader:
+			if name not in a:
+				d.write(a)
+		print('删除成功')
+elif choice=='q':
+	name2=str(input('请输入要修改号码的名字:'))
+	with open('/home/zelin/0211/01.csv','w') as w:
+		file=csv.writer(w,dialect='excel')
+		for l in reader:
+			l=l.strip('\n')
+			l=l.split(',')
+			if l[0]==name2:
+				num=str(input('请输入新的号码:'))
+				l[1]=num
+				file.writerow(l)
+			else:
+				file.writerow(l)
+elif choice=='x':
+	name3=input('请输入新增的用户名:')
+	num3=input('请输入新增的号码: ')
+	with open('/home/zelin/0211/01.csv','w') as x:
+		file=csv.writer(x,dialect='excel')
+		for p in reader:
+			p=p.strip('\n')
+			p=p.split(',')
+			file.writerow(p)
+		pd=[name3,num3]
+		file.writerow(pd)
+
+with open('/home/zelin/0211/01.csv','r') as n:
+	reader=csv.reader(n)
+	for ip in reader:
+		print(ip)
