@@ -1,0 +1,44 @@
+学习目标
+掌握类的属性__init__()方法
+
+课程内容
+a.__init__()使用方法
+b.__init__()调用
+
+
+a.__init__()使用方法
+定义默认值
+	class 类:
+		def __init__(self):
+			方法列表
+
+b.__init__()调用
+class student:
+        def __init__(self):
+                self.boy=20
+                self.girl=30
+        def study(self):
+                print('good good study!')
+
+simida=student()   #实例化对象
+print(simida.boy)
+print(simida.girl)
+注意：没有创建对象是后没有调用__init__前就默认右2个属性，__init__方法创建对象后被默认调用
+class student:
+        def __init__(self,boy,girl):
+                self.badboy=boy
+                self.cutegirl=girl
+        def study(self):
+                print('study')
+
+z=student(20,30)
+print('班级中右男生%d个'%z.badboy)
+print('班级中右女生%d个'%z.cutegirl)
+
+c.补充内容
+__init__方法，创建一个对象时候默认被调用，不需要手动调用
+__init__(self)中第一个参数名字是self，如果在创建对象时候传递2参数拿在self后面跟2个额外的参数
+
+
+
+
