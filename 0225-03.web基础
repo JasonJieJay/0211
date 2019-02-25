@@ -1,0 +1,69 @@
+1.常见的软件分类
+	QQ        c/s   b/s
+	wechat    c/s   b/s
+	weibo	  c/s   b/s
+	小红书    c/s
+	斗鱼      c/s   b/s
+	抖音	  c/s
+	office    单机  c/s  b/s
+	b612      单机
+	快播	  c/s   b/s
+a.单机软件
+	不需要网络就可以执行的应用程序
+b.b/s架构软件
+	b:浏览器
+		IE        360  sougou  uc  傲游
+		firefox	  
+		chorme
+		safari
+	s:服务器
+		性能特别牛逼的电脑
+c.c/s架构软件
+	c:客户端
+		pc端
+		移动端
+	s:服务器
+2.b/s架构的后端组成
+	前端：
+	html	标记性语言 静态网页 
+	css	样式表     结构美化
+	js	javascript 动态页面(动画、交互)
+		java	   
+		jsp	   java server page
+	ui	美工
+	后端：
+	操作系统
+		unix
+		linux
+		windows
+	web服务器
+		apache    基金组织  不支持java
+		nginx	  轻量级web服务器(反向代理，负载均衡)
+		tomcat    java
+		iis	  asp
+		weblogic
+		jboss
+	数据库服务器
+		关系型数据库
+		informix	IBM+HP   军、政、运、银
+		db2		IBM	 军、政、运、银
+		oracle		oracle	 中大型
+		mysql		oracle   互联网
+		sqlserver	微软	 
+		非关系型数据库
+		mongodb		大数据、爬虫
+		redis		缓存、验证
+		cassandra	facebook
+	
+
+
+
+
+
+		
+
+
+
+
+
+
