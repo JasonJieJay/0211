@@ -1,0 +1,34 @@
+1.抓包原理
+a-------抓包工具-----b
+	中间人
+2.抓包工具
+	F12		
+	httpwatch
+	fiddler
+	wireshark
+	burpsuite
+3.抓包信息
+	http://www.gzdingyue.com/user.php?act=register
+	a.基础信息
+		文件名字
+		状态码
+		文件类型
+		参考页面
+		文件大小
+		加载时间
+	b.请求头
+		请求地址
+		请求方式
+		可以解析的文件类型
+		除文本外的压缩方式
+		语言
+		cookie
+		客户端信息
+	c.请求体
+	d.响应头
+		状态码
+		服务器时间
+		web服务器版本
+	e.响应体
+		网页源代码
+
