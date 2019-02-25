@@ -1,0 +1,123 @@
+学习目标
+掌握异常处理的机制和方法
+
+课程内容
+a.异常的概念
+b.常见的异常
+c.异常的处理方式
+
+a.异常的概念
+程序执行过程中发生应想程序正常执行的事件，当python无法正常处理时候会产生异常
+异常是python中的一个对象，表示一个错误
+捕获异常：为了方式python程序中止，当脚本发生异常时候需要进行捕获
+
+b.常见的异常
+1.NameError
+没有定义变量就直接使用
+p
+2.Syntaxerror
+语法错误
+3.IO Error
+fileNotFoundError
+p=open('/home/heygor/666','r')
+4.ZeroDvisionError
+10/0
+5.valueError
+int('d')
+
+c.异常的处理方式
+1.try...except
+有可能发生错误的代码放在try和except中间
+try:
+        p
+except NameError as e:
+        print('catch error!')
+
+2.try..except..else
+语法：
+try:
+	代码
+except：
+	代码
+else:
+	代码
+	#如果没有报错可以执行其他操作
+
+3.try...finally
+语法：
+try:
+	代码
+finally:
+	代码
+	#如果没有捕获到异常代码执行
+	#如果捕获到异常，先执行这段代码，在处理异常，无论如何都会执行
+
+try:
+        f=open('666','r')
+        print(f.read())
+finally:
+        print('im living!')
+
+4.try...except...finally
+语法：
+try：
+	代码
+except：
+	代码
+finally:
+	代码
+#如果try没有捕获到异常，执行finally语句
+#如果捕获到了异常，显示异常，再finally语句
+
+5.try...except...else...finally...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
