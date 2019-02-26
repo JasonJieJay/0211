@@ -1,0 +1,72 @@
+mongodb
+非关系型数据库
+存储数据是以bson形式存在
+
+a.mongodb的安装
+mongodb的官网：www.mongodb.org
+sudo apt-get install mongodb
+
+b.mongodb的服务
+mongod	mongodb的主服务
+mongo	mongodb的客户端服务
+27017   mongodb的端口
+检查服务
+	ps -ef |grep mongod
+检查端口
+	netstat -an |grep 27017
+c.启动服务
+注意：默认安装后会启动mongodb主服务
+mongod --dbpath /opt/data  
+mongod --dbpath /opt/data --logpath /opt/data/mongo.log
+mongod --dbpath /opt/data --logpath /opt/data/mongo.log --fork
+--dbpath	存储数据的路径(目录)
+--logpath	存储日志的位置(文件)
+--fork		后台执行
+
+d.mongodb的登录
+	mongo
+		登录本地test数据库
+	mongo 127.0.0.1/admin
+`		登录IP为127.0.0.1的admin数据库
+	mongo 127.0.0.1:27017/admin
+		登录IP为127.0.0.1端口为27017的admin数据库
+e.基础命令
+	mysql	mongodb
+	数据库	数据库
+	表	集合
+	数据	文档
+	mongodb数据库由集合组成
+	mongodb的集合是由文档组成
+	数据库分为2部分：软件、数据
+	常说的数据库是数据
+	db	查看当前数据库名字
+	show databases
+	show dbs
+		查看当前有哪些数据库
+	use local
+		当前数据库切换为local
+	show tables
+	show collections
+		查看当前数据库有哪些集合
+	db.startup_log.find()
+		查看startup_log集合中所有文档
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
