@@ -76,6 +76,22 @@ h.文档的删除
 	db.xiyouji.remove()
 
 	
+i.文档的修改
+	db.集合.upate(查询表达式，新值，选项)
+	全部替换文档
+	db.xiyouji.update({name:'5kong'},{age:100})
+	修改指定文档
+	db.xiyouji.update({age:18},{$set:{age:100}})
+	删除某个键值对
+	db.xiyouji.update({name:'tangsir'},{$unset:{age:100}})
+	重命名键
+	db.xiyouji.update({name:'shasir'},{$rename:{'age':'nianling'}})
+	列的增长
+	db.xiyouji.update({name:'shasir'},{$inc:{age:-30}})
+	注意：修改如果找到匹配的行只修改一行，如果需要修改多行，用multi选项
+	db.xiyouji.update({name:'tang'},{$set:{age:100}},{multi:true})
+	db.xiyouji.update({name:'5kong'},{$set:{'jingli.kill':100}})
+	db.xiyouji.update({},{$set:{age:200}},{multi:true})
 
 
 
