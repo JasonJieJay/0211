@@ -50,6 +50,40 @@ e.基础命令
 		查看当前数据库有哪些集合
 	db.startup_log.find()
 		查看startup_log集合中所有文档
+f.CURD(增删改查)
+	文档的新增
+	db.xiyouji.insert({name:'tangsir',age:18})
+	文档的查询
+	db.xiyouji.find()
+	文档的修改
+	db.xiyouji.update({name:'shasir'},{$set:{age:200}})
+	文档的删除
+	db.xiyouji.remove({name:'shasir'})
+g.文档的新增
+	新增普通文档
+	db.xiyouji.insert({name:'8jie',age:300})
+	新增文档指定_id
+	db.xiyouji.insert({_id:0,name:'song',age:2000})
+	新增内嵌文档
+	db.xiyouji.insert({name:'5kong',jingli:{kill:100,hit:1}})
+	新增多个文档
+	db.xiyouji.insert([{name:'redhair'},{name:'puti'},{name:'tai2'}])
+	
+h.文档的删除
+	删除指定文档
+	db.xiyouji.remove({name:'puti'})
+	删除所有文档
+	db.xiyouji.remove()
+
+	
+
+
+
+
+
+
+
+
 
 
 
