@@ -1,0 +1,109 @@
+1.常见数据库
+	oracle
+	mysql
+	sqlserver
+2.mysql的安装
+	sudo apt-get install mysql-server
+3.mysql基础
+	mysql的服务
+		mysqld	mysql的主服务
+		mysql	mysql的客户端服务
+	mysql的端口
+		3306
+	mysql的配置文件
+		my.cnf
+	mysql的管理员
+		root
+	查看进程
+		ps -ef |grep mysql
+	查看端口
+		netstat -an |grep 3306
+4.mysql登录
+	mysql -u root -p
+	管理员登录本地数据库
+	mysql -h 127.0.0.1 -u root -p
+	管理员登录IP为127.0.0.1的数据库
+	数据库分为2部分，数据库数据，数据库软件
+	mysql的数据库是由表组成
+	mysql的表是由数据组成
+	show databases;
+		查看当前有哪些数据库
+	select database();
+		查看当前数据库的名字
+	use mysql;
+		设置当前数据库为mysql
+	show tables;
+		查看当前数据库中有哪些表
+	select * from user;
+		查看user表中数据
+5.表结构
+	create database test;
+		创建数据库test
+	drop database test;
+		删除数据库test
+	a.数据类型
+		字符	char  varchar      'abc'  '123'
+		数字	int   		   123 123.45
+		日期	date		   '2019-01-01'
+	注意：varchar	变长(varchar(10))
+	      char	定长(char(10))
+		身份证	
+		电话	
+	b.表结构创建
+	语法：create table 表(
+		列	数据类型，
+		列	数据类型
+		....
+	);
+	创建数据库简历表(resume),名字(name) 字符类型，电话(tel) 数字类型，经历(exp) 字符类型
+	create table resume( name char(10), tel  int, exp char(20) );
+	create table resume1( name char, tel  int, exp char(20) );
+	补充：
+	查看表结构
+	desc 表名;
+	desc resume1;
+	c.表结构的修改
+	增加列
+	alter table resume1 add id1 char(10);
+	修改列
+	alter table resume1 modify id1 int;
+	删除列	
+	alter table resume1 drop column id1;
+	d.表结构的删除
+	语法：drop table 表名;
+	e.约束
+	主键约束	列中的数据唯一，每张表中只能1个主键，不能为空
+	唯一约束	列中的数据唯一，作为主键约束的补充，可以为空
+	非空		列中的数据不能为空
+	检查		列中的数据是否满足条件
+	外键		列中的数据依赖于另外一张表中的数据
+
+	语法：
+	create table 表(
+		列 数据类型 primary key,
+		列 数据类型 unique,
+		列 数据类型 check(检查条件),
+		列 数据类型 not null,
+		列 数据类型 references 被参考表(被参考列)
+	);
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	
+
+
+
