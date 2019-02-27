@@ -17,3 +17,10 @@ data=db.xiyouji.find()
 for i in data:
         print(i)
 ~                      
+1.实现功能
+        简历新增，修改，删除，查看
+        简历至少有
+                名字
+                电话
+                经历
+
