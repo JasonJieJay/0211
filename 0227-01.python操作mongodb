@@ -1,0 +1,19 @@
+1.安装python、mongodb相关模块
+	python如果需要操作mongodb数据库必须安装pymongo模块
+	sudo pip3 install pymongo
+2.python操作数据库实例
+import pymongo
+#导入相应模块
+conn=pymongo.MongoClient(host='127.0.0.1',port=27017)
+#设置连接参数，IP地址，端口
+#注意：127.0.0.1==localhost==电脑本机
+db=conn.test
+#新增文档
+db.dongyouji.insert({'name':'gaga'})
+print('输入完毕')
+#查询文档
+data=db.xiyouji.find()
+#print(data)
+for i in data:
+        print(i)
+~                      
